@@ -14,9 +14,12 @@ As a user, I would like to choose the correct word from the list of words
 
 using namespace std;
 
-int getWords() {
+string getWords(string letter) {
+	string line;
 	string Dictionary; // Word Variable
-	int WordNumber; // Number to signify the amount of characters in the word
+	int WordCounter; // Number to signify the amount of characters in the word
+  int MaxCoumter;
+  string result;
 
 	// Opens the file to be read
 	ifstream inFile;
@@ -26,23 +29,43 @@ int getWords() {
 		cerr << "The file could not be read. Invalid type or the file is missing.";
 		exit(1); // ...and terminates the program with an error
 	}
-
+	
+	if(inFile.is_open()) { // If the file is open...
+			while (inFile.good()) {//...and while the file is good
+				getline(inFile, line); // Read the lines
+				
+				for(int i=0; i<3; i++){
+					WordCounter = 0;
+         		for(int j=0; j<line.length();j++){
+         			if(letter[i] == line[j]){
+         				WordCounter++;
+         				break;
+         			}
+         		}
+         		
+         		if(WordCounter > MaxCoumter){
+         				result = line;
+         				MaxCoumter = WordCounter;
+         			}
+				}
+			}
+		}
 	//STRING
 	//LIBRARY STRING IN C++
-
 	inFile.close(); // When done it closes the file
+	cout << "Result: " <<  result;
 
 }
 
 int main() {
-	int words = getWords(); // The words that appear will come from the function above
 	string letters; // The user's input
 	
 	while(letters.length()<=3) { // If the input length is under three letters, we continue
 		cout << "Enter Anagram (Max: 3):"; // 
 		getline(cin, letters);
-		cout << "Your Anagram: " << letters;
+		cout << "Your Anagram: " << letters << "\n" ;
+		
+		getWords(letters); // The words that appear will come from the function above
 	}
-	
 	return 0;
 }
