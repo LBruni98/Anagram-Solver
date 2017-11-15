@@ -1,3 +1,7 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
 /*
 As a user, I would like to enter the Anagram
 As a user, I would like the input to be stored
@@ -8,41 +12,37 @@ As a user, I would like to view the available matching words
 As a user, I would like to choose the correct word from the list of words
 */
 
-#include <iostream>
-#include <fstream>
-#include <string>
-
 using namespace std;
 
-string getWords() {
-	string Dictionary[100];
-	int WordNumber;
-	
+int getWords() {
+	string Dictionary; // Word Variable
+	int WordNumber; // Number to signify the amount of characters in the word
+
+	// Opens the file to be read
 	ifstream inFile;
-	inFile.open("Words - English Words 79K.csv");
+	inFile.open("Words.csv");
 	
-	if(!inFile) {
-		cerr << "There was an error trying to open the file";
-		exit(1);
+	if(!inFile) { // If the file is not there , it returns a message...
+		cerr << "The file could not be read. Invalid type or the file is missing.";
+		exit(1); // ...and terminates the program with an error
 	}
-	
+
 	//STRING
 	//LIBRARY STRING IN C++
-	
-	while (inFile >> Dictionary[100] >> WordNumber) {
-		//Process the words and the numbers
-	}
+
+	inFile.close(); // When done it closes the file
+
 }
 
 int main() {
-	string words;
-	char letters[3];
+	int words = getWords(); // The words that appear will come from the function above
+	string letters; // The user's input
 	
-	cout << "Enter Anagram (Max: 3): ";
-	cin >> letters;
-	cout << "Your Anagram: " << letters;
-	
-	getWords();
+	while(letters.length()<=3) { // If the input length is under three letters, we continue
+		cout << "Enter Anagram (Max: 3):"; // 
+		getline(cin, letters);
+		cout << "Your Anagram: " << letters;
+	}
 	
 	return 0;
 }
