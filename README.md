@@ -1,5 +1,15 @@
-# Project-003
-Anagram Solver for three letters
+# Anagram Solver
+Project 003
+
+## Table of Contents
+1. Introduction
+2. Development
+3. Creation and Implementation
+4. Research
+
+## Introduction
+
+## Development
 
 #### Flowchart
 
@@ -9,3 +19,7 @@ Here is the main layout for what I'm trying to do. The flowchart shows that the 
 
 #### Evaluation
 The program had carried out the tasks laid out in the flowchart and user stories and C++ had mangaed to carry out the functions with ease. C++ helps with being more data oriented as it helps with the methods included in the code and that its ease with reading files and using the file to help with word comparison. The language takes most of its roots from C making it compile well with the language and is fairly felxable and prior knowledge helps with the development of most of the functions, albeit the coding language is a tad difficult because of the slightly different syntax to learn
+
+## Creation and Implementation
+
+## Research
