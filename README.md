@@ -8,6 +8,7 @@ Project 003
 4. Research
 
 ## Introduction
+This design document showcases the design, development and implementation of the anagram solver, along with the features and mechanics within the program.
 
 ## Development
 
