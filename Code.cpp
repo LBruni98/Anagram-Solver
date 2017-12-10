@@ -17,8 +17,8 @@ string getWords(string letters) {
 	string line;
 	string Dictionary; // Word Variable
 	int WordCounter; // Number to signify the amount of characters in the word
-  int MaxCounter; // The maximum amount of characters
-  string result;
+  	int MaxCounter; // The maximum amount of characters
+  	string result;
 
 	// Opens the file to be read
 	ifstream inFile;
@@ -36,16 +36,20 @@ string getWords(string letters) {
 			for(int i=0; i<letters.length(); i++) {
 				for(int j=0; j<line.length(); j++){
 					if(letters[i] == line[j]){
-         		WordCounter++;
-         		break;
-         	}
+         					WordCounter++;
+         					//break;
+         					if(WordCounter > MaxCounter){
+     							result = line;
+     							MaxCounter = WordCounter;
+						}
+         				}
 				}
 			}
 			
-			if(WordCounter > MaxCounter){
-     			result = line;
-     			MaxCounter = WordCounter;
-				}
+			//if(WordCounter > MaxCounter){
+     			//result = line;
+     			//MaxCounter = WordCounter;
+				//}
 		}
 	}
 	//STRING
@@ -56,12 +60,12 @@ string getWords(string letters) {
 }
 
 int main() {
-  string letters; // The user's input
+	string letters; // The user's input
 
-while(true){
+	while(true){
 	
-	  cout << "Enter Anagram (Max: 3):"; // 
-		getline(cin, letters);
+	cout << "Enter Anagram (Max: 3):"; // 
+	getline(cin, letters);
 	
 	while(letters.length()>3) { // If the input length is above three letters
 		cout << "Too many characters in this input\n";
@@ -69,9 +73,9 @@ while(true){
 		getline(cin, letters);
 	}
 	
-	 cout << "Your Anagram: " << letters << "\n" ;
+	cout << "Your Anagram: " << letters << "\n" ;
 	
-		getWords(letters); // The words that appear will come from the function above
-}
+	getWords(letters); // The words that appear will come from the function above
+	}
 	return 0;
 }
