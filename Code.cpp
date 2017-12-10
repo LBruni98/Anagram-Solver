@@ -9,7 +9,6 @@ As a user, I would want a file of words to be read
 As a user, I would want the input to be compared with the words
 As a user, I would like to be informed of if there are word matches or not
 As a user, I would like to view the available matching words
-As a user, I would like to choose the correct word from the list of words
 */
 
 using namespace std;
