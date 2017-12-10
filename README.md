@@ -69,6 +69,7 @@ Overall, the implementation of the code would be similar to the second project, 
 ![IDE](https://github.com/LBruni98/High-Low-Card-Game/blob/master/Project%202%20-%20Proof%201.PNG)
 
 The IDE used was [repl.it](https://repl.it/) which is an online IDE that covers numerous programming languages other than C++ and can help out immensely, such as the ability to create webpages with HTML. It was used for this task and helped with the development of the program, because it had the fundamentals of a common IDE such as syntax highlighting and is a code interpreter and can also the code can be directly link to the github account. Though the downsides were that this is more or less a simple IDE and some errors were hard to solve without the help of the internet, something that could've been easier with a proper IDE.
+
 ## Research
 * http://www.cplusplus.com/reference/fstream/ifstream/
 * http://www.cplusplus.com/reference/fstream/ifstream/open/
