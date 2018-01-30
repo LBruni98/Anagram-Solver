@@ -111,6 +111,7 @@ if(inFile.is_open()) { // If the file is open...
 The comparison here is carried out if the file is both open and good to be read as it gets a line. For loops are used to match the word via the letters in the input and the words in the file.
 
 ![Anagrams](https://github.com/LBruni98/Anagram-Solver/blob/master/Project%203%20-%20Proof%202.PNG)
+
 Anagrams being solved.
 
 ## Research
